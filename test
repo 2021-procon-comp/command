@@ -1,0 +1,12 @@
+ls
+echo 'move downloads'
+cd Downloads/OneDrive_2_2021-9-17/テストサーバー/procon32_sample 
+ls
+python3 -m venv .venv
+source .venv/bin/activate
+echo 'get_ppm'
+python procon32.py download --token=your_token
+python3 translate.py
+cp problem.txt /Applications/siv3d_v0.4.3_macOS/examples/empty/App
+ls
+scp problem.txt admin@192.168.100.4:~/Desktop/keeptxt
